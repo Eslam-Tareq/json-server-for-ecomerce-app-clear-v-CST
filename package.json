@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node api/server.js",
-    "server": "npx json-server --watch db.json --port 3000"
+    "server": "npx json-server --watch newdb.json --port 3000"
   },
   "dependencies": {
     "@vercel/kv": "^3.0.0",

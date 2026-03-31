@@ -12,7 +12,7 @@ const client = new MongoClient(process.env.MONGODB_URI);
 
 const getDb = async () => {
   await client.connect();
-  const db = client.db("mydb");
+  const db = client.db("ecommerce-CST-iti-clear-v");
   const col = db.collection("data");
   const doc = await col.findOne({ _id: "db" });
   if (doc) return doc.data;
@@ -24,7 +24,7 @@ const getDb = async () => {
 
 const saveDb = async (data) => {
   await client.connect();
-  const db = client.db("mydb");
+  const db = client.db("ecommerce-CST-iti-clear-v");
   await db
     .collection("data")
     .updateOne({ _id: "db" }, { $set: { data } }, { upsert: true });
